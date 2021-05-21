@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace PolymorphicConfigurationReader
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            IConfigurationReader reader = new ConfigurationReader();
+            string value = reader.Read("ABC");
+            Console.WriteLine($"ABC=>{value}");
+            reader = new ConnectionReader();
+            value = reader.Read("db");
+            Console.WriteLine($"db=>{value}");
         }
     }
 }
