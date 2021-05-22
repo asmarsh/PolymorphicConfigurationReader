@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PolymorphicConfigurationReader
 {
-    internal class ConfigurationReader : IConfigurationReader
+    public class ConfigurationReader : IConfigurationReader
     {
         public string Read(string key)
         {
