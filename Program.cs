@@ -16,6 +16,8 @@ namespace PolymorphicConfigurationReader
             reader = new ConnectionReader();
             value = reader.Read("db");
             Console.WriteLine($"db=>{value}");
+
+            Console.ReadKey();
         }
     }
 }
